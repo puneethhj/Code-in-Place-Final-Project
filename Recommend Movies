@@ -1,0 +1,9 @@
+Python
+def recommend_movies(similarity, data, n=10):
+    indices = similarity.argsort()[0, -n:]  # Top N movies based on similarity
+    return data.iloc[indices][["title", "genre"]]
+
+Python
+recommendations = recommend_movies(similarity, data)
+print("Recommended Movies for You:")
+print(recommendations.to_string(index=False))
