@@ -1,0 +1,8 @@
+Use cosine similarity to measure the similarity between your user profile and the movie ratings of other users (or pre-defined user profiles in your data). Cosine similarity compares the "direction" of ratings vectors, indicating how closely user preferences align.
+
+
+
+
+Python
+user_movie_matrix = user_profile_df.dot(data.drop(["title", "genre"], axis=1).T)  # Assuming user_profile_df contains user ratings
+similarity = cosine_similarity(user_movie_matrix)
