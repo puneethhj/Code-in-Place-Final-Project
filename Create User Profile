@@ -1,0 +1,10 @@
+Python
+def get_user_profile():
+    genres = []
+    while True:
+        genre = input("Enter a genre you like (or 'done' to finish): ")
+        if genre.lower() == "done":
+            break
+        genres.append(genre)
+    min_rating = float(input("Enter the minimum rating (1-5): "))
+    return genres, min_rating
